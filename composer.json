@@ -1,0 +1,22 @@
+{
+    "name": "alikazemayni/easy_permission",
+    "description": "This package is for creating a simple authentication system",
+    "type": "library",
+    "require": {
+        "php": "8.1",
+        "miladshm/controller-helpers": "0.8.6"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Alikazemayni\\EasyPermission\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "aliKazemayni",
+            "email": "ali.kazemayni79@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}

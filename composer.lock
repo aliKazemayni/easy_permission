@@ -1,0 +1,72 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "af5a83f2c971ebc19c17a7fd745a92d1",
+    "packages": [
+        {
+            "name": "miladshm/controller-helpers",
+            "version": "v0.8.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/miladshm/controller-helpers.git",
+                "reference": "17fb53a80f547766911808c5429848706172ca4b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/miladshm/controller-helpers/zipball/17fb53a80f547766911808c5429848706172ca4b",
+                "reference": "17fb53a80f547766911808c5429848706172ca4b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^8.5",
+                "phpunit/phpunit": ">=9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Miladshm\\ControllerHelpers\\Providers\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Miladshm\\ControllerHelpers\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "milad",
+                    "email": "mldsh6@gmail.com"
+                }
+            ],
+            "description": "Resource controller methods in traits",
+            "support": {
+                "issues": "https://github.com/miladshm/controller-helpers/issues",
+                "source": "https://github.com/miladshm/controller-helpers/tree/v0.8.6"
+            },
+            "time": "2023-08-15T10:55:06+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": "8.1"
+    },
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
+}
