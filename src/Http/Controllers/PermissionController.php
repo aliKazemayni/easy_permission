@@ -1,27 +1,26 @@
 <?php
 
-namespace Alikazemayni\EasyPermission\Http\Controllers\Publish;
+namespace Alikazemayni\EasyPermission\Http\Controllers;
 
-use Alikazemayni\EasyPermission\Models\Role;
-
+use Alikazemayni\EasyPermission\Http\Controllers\Publish\Controller;
+use Alikazemayni\EasyPermission\Http\Requests\Permission\StorePermissionRequest;
+use Alikazemayni\EasyPermission\Http\Requests\Permission\UpdatePermissionRequest;
+use Alikazemayni\EasyPermission\Models\Permission;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Http\FormRequest;
-
 use Miladshm\ControllerHelpers\Http\Traits\HasApiDatatable;
 use Miladshm\ControllerHelpers\Http\Traits\HasDestroy;
 use Miladshm\ControllerHelpers\Http\Traits\HasShow;
 use Miladshm\ControllerHelpers\Http\Traits\HasStore;
 use Miladshm\ControllerHelpers\Http\Traits\HasUpdate;
 
-use Alikazemayni\EasyPermission\Http\Requests\Role\StoreRoleRequest;
-use Alikazemayni\EasyPermission\Http\Requests\Role\UpdateRoleRequest;
-class RoleController extends Controller
+class PermissionController extends Controller
 {
     use HasApiDatatable , HasShow , HasStore , HasUpdate , HasDestroy;
 
     private function model(): Model
     {
-        return new Role();
+        return new Permission();
     }
 
     private function extraData(Model $item = null): ?array
@@ -36,11 +35,11 @@ class RoleController extends Controller
 
     private function requestClass(): FormRequest
     {
-        return new StoreRoleRequest();
+        return new StorePermissionRequest();
     }
 
     protected function updateRequestClass(): ?FormRequest
     {
-        return new UpdateRoleRequest();
+        return new UpdatePermissionRequest();
     }
 }
