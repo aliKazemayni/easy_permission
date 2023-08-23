@@ -9,6 +9,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     {
         $this->publishes([
             __DIR__ . "/../Http/Controllers/Publish/" => app_path('Http/Controllers/'),
+            __DIR__ . "/../Http/Requests/" => app_path('Http/Requests/'),
             __DIR__ . "/../Models/" => app_path('Models/'),
         ],'publish-permissions-file');
         $this->loadRoutesFrom(__DIR__.'/../../routes/api.php');

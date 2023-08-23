@@ -1,19 +1,20 @@
 <?php
 
-namespace Alikazemayni\EasyPermission\Http\Controllers\Publish;
+namespace App\Http\Controllers;
 
-use Alikazemayni\EasyPermission\Http\Controllers\Controller;
-use Alikazemayni\EasyPermission\Http\Requests\Role\StoreRoleRequest;
-use Alikazemayni\EasyPermission\Http\Requests\Role\UpdateRoleRequest;
-use Alikazemayni\EasyPermission\Models\Role;
+use App\Models\Role;
+
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Http\FormRequest;
+
 use Miladshm\ControllerHelpers\Http\Traits\HasApiDatatable;
 use Miladshm\ControllerHelpers\Http\Traits\HasDestroy;
 use Miladshm\ControllerHelpers\Http\Traits\HasShow;
 use Miladshm\ControllerHelpers\Http\Traits\HasStore;
 use Miladshm\ControllerHelpers\Http\Traits\HasUpdate;
 
+use App\Http\Requests\Role\StoreRoleRequest;
+use App\Http\Requests\Role\UpdateRoleRequest;
 class RoleController extends Controller
 {
     use HasApiDatatable , HasShow , HasStore , HasUpdate , HasDestroy;

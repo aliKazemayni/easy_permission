@@ -1,18 +1,20 @@
 <?php
 
-namespace Alikazemayni\EasyPermission\Http\Controllers\Publish;
+namespace App\Http\Controllers;
 
-use Alikazemayni\EasyPermission\Http\Controllers\Controller;
-use Alikazemayni\EasyPermission\Http\Requests\Section\StoreSectionRequest;
-use Alikazemayni\EasyPermission\Http\Requests\Section\UpdateSectionRequest;
-use Alikazemayni\EasyPermission\Models\Section;
+use App\Models\Section;
+
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Http\FormRequest;
+
 use Miladshm\ControllerHelpers\Http\Traits\HasApiDatatable;
 use Miladshm\ControllerHelpers\Http\Traits\HasDestroy;
 use Miladshm\ControllerHelpers\Http\Traits\HasShow;
 use Miladshm\ControllerHelpers\Http\Traits\HasStore;
 use Miladshm\ControllerHelpers\Http\Traits\HasUpdate;
+
+use App\Http\Requests\Section\StoreSectionRequest;
+use App\Http\Requests\Section\UpdateSectionRequest;
 
 class SectionController extends Controller
 {

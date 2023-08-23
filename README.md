@@ -3,14 +3,14 @@
 
 ---
 
-### Install Package
+### Install Package :
 
 ```shell
   composer require alikazemayni/easy_permission
 ```
 
-### Publish Controller
+### Publish Files :
 
 ```shell
-  php artisan vendor:publish --tag publish-controller
+  php artisan vendor:publish --tag publish-permissions-file
 ```
