@@ -1,6 +1,6 @@
 <?php
 
-namespace Alikazemayni\EasyPermission\Http\Requests\Permission;
+namespace App\Http\Requests\Permission;
 
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
