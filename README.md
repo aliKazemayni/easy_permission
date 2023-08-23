@@ -14,3 +14,9 @@
 ```shell
   php artisan vendor:publish --tag publish-permissions-file
 ```
+
+### Migrate :
+
+```shell
+  php artisan migrate
+```
