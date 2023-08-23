@@ -2,7 +2,6 @@
 
 namespace Alikazemayni\EasyPermission\Http\Controllers;
 
-use Alikazemayni\EasyPermission\Http\Controllers\Publish\Controller;
 use Alikazemayni\EasyPermission\Http\Requests\Permission\StorePermissionRequest;
 use Alikazemayni\EasyPermission\Http\Requests\Permission\UpdatePermissionRequest;
 use Alikazemayni\EasyPermission\Models\Permission;

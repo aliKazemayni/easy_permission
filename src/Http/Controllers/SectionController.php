@@ -2,7 +2,6 @@
 
 namespace Alikazemayni\EasyPermission\Http\Controllers;
 
-use Alikazemayni\EasyPermission\Http\Controllers\Publish\Controller;
 use Alikazemayni\EasyPermission\Http\Requests\Section\StoreSectionRequest;
 use Alikazemayni\EasyPermission\Http\Requests\Section\UpdateSectionRequest;
 use Alikazemayni\EasyPermission\Models\Section;
