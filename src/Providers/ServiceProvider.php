@@ -9,7 +9,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     {
         $this->publishes([
             __DIR__ . "/../Http/Controllers" => app_path('Http/Controllers/YourController.php')
-        ]);
+        ],'publish-controller');
     }
 
     public function register()
