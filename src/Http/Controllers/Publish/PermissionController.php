@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Alikazemayni\EasyPermission\Http\Controllers\Publish;
 
-use App\Models\Permission;
+use Alikazemayni\EasyPermission\Models\Permission;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Http\FormRequest;
@@ -13,8 +13,8 @@ use Miladshm\ControllerHelpers\Http\Traits\HasShow;
 use Miladshm\ControllerHelpers\Http\Traits\HasStore;
 use Miladshm\ControllerHelpers\Http\Traits\HasUpdate;
 
-use App\Http\Requests\Permission\StorePermissionRequest;
-use App\Http\Requests\Permission\UpdatePermissionRequest;
+use Alikazemayni\EasyPermission\Http\Requests\Permission\StorePermissionRequest;
+use Alikazemayni\EasyPermission\Http\Requests\Permission\UpdatePermissionRequest;
 
 class PermissionController extends Controller
 {
