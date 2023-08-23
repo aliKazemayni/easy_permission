@@ -18,5 +18,12 @@
             "email": "ali.kazemayni79@gmail.com"
         }
     ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Alikazemayni\\EasyPermission\\Providers\\ServiceProvider"
+            ]
+        }
+    },
     "minimum-stability": "stable"
 }
