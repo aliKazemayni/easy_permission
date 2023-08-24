@@ -29,7 +29,7 @@ class RoleController extends Controller
 
     private function relations(): array
     {
-        return [];
+        return ['permission' , 'user'];
     }
 
     private function requestClass(): FormRequest
