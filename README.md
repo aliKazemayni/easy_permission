@@ -29,8 +29,19 @@
 public function permissions(): BelongsToMany
 {
     $this->belongsToMany(Permission::class, 'user_permission',
-     'user_id', 'permissions_id')->withTimestamps();
+        'user_id', 'permissions_id')->withTimestamps();
 }
+```
+
+### Get all permission and user permission :
+
+```php
+    ResponderFacade::setData(
+        Permissions::with(
+            ['users' => fn($q) => $q->where('user_id' , $request->user_id),'section']
+        )
+        ->get()
+    )->respond();
 ```
 
 ### Sync user permission :
