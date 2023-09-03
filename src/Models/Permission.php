@@ -21,11 +21,12 @@ class Permission extends Model
     public function role(): BelongsToMany
     {
         return $this->belongsToMany(Role::class, 'role_permission',
-            'permissions_id', 'role_id')->withTimestamps();
+            'permission_id', 'role_id')->withTimestamps();
     }
 
     public function users(): BelongsToMany
     {
-        return $this->belongsToMany(User::class)->withTimestamps();
+        return $this->belongsToMany(User::class  , 'user_permission' ,
+            'permission_id' , 'user_id')->withTimestamps();
     }
 }
