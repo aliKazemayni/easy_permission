@@ -25,7 +25,7 @@ class StoreRoleRequest extends FormRequest
         return [
             'name' => ['required' , 'string','max:255'],
             'type' => ['string' , 'max:255'],
-            'company_id' => ['required', 'exists:companies,id']
+            'user_id' => ['required', 'exists:users,id']
         ];
     }
 }
