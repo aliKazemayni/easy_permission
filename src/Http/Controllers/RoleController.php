@@ -56,11 +56,13 @@ class RoleController extends Controller
     protected function storeCallback(Request $request, Model $item): void
     {
         $request->permissions && $item->permissions()->sync($request->permissions);
+        $item["permissions"] = $item->permissions()->get();
     }
 
     protected function updateCallback(Request $request, Model $item)
     {
         $request->permissions && $item->permissions()->sync($request->permissions);
+        $item["permissions"] = $item->permissions()->get();
     }
 
     public function add_user(Request $request){
