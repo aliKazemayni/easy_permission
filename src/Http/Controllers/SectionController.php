@@ -2,20 +2,23 @@
 
 namespace Alikazemayni\EasyPermission\Http\Controllers;
 
+use Alikazemayni\EasyPermission\Models\Section;
 use Alikazemayni\EasyPermission\Http\Requests\Section\StoreSectionRequest;
 use Alikazemayni\EasyPermission\Http\Requests\Section\UpdateSectionRequest;
-use Alikazemayni\EasyPermission\Models\Section;
+
+use Illuminate\View\View;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Http\FormRequest;
-use Miladshm\ControllerHelpers\Http\Traits\HasApiDatatable;
+
 use Miladshm\ControllerHelpers\Http\Traits\HasDestroy;
+use Miladshm\ControllerHelpers\Http\Traits\HasIndex;
 use Miladshm\ControllerHelpers\Http\Traits\HasShow;
 use Miladshm\ControllerHelpers\Http\Traits\HasStore;
 use Miladshm\ControllerHelpers\Http\Traits\HasUpdate;
 
 class SectionController extends Controller
 {
-    use HasApiDatatable , HasShow , HasStore , HasUpdate , HasDestroy;
+    use HasIndex , HasShow , HasStore , HasUpdate , HasDestroy;
 
     private function model(): Model
     {
@@ -29,7 +32,18 @@ class SectionController extends Controller
 
     private function relations(): array
     {
-        return [];
+        return [
+            'permission' => fn($q) => $q->with(
+                [
+                    'users' => function($user){
+                        return $user->select('id')->find(request()->user_id);
+                    },
+                    'role' => function($role) {
+                        return $role->where('roles.id',request()->role_id);
+                    }
+                ]
+            ),
+        ];
     }
 
     private function requestClass(): FormRequest
@@ -40,5 +54,10 @@ class SectionController extends Controller
     protected function updateRequestClass(): ?FormRequest
     {
         return new UpdateSectionRequest();
+    }
+
+    private function indexView(): View
+    {
+        // TODO: Implement indexView() method.
     }
 }
